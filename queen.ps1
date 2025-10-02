@@ -6,6 +6,7 @@ $board = @(
 	@('.','.','.','.')
 )
 
+
 function CheckAttack ($x, $y) {
 	# check horizontal, x
 	for ($i=0; $i -lt 4; $i++) {
@@ -32,22 +33,38 @@ for ($x=0; $x -lt 4; $x++) {
 		# x
 		for ($i=0; $i -lt 4; $i++) {
 			$a = $board[$x][$i] -eq 'Q'
-			if ($a) { "$x $y" }
+			#if ($a) { "$x $y" }
 		}
 
-		'--------'
+		#'--------'
 		# y
 		for ($i=0; $i -lt 4; $i++) {
 			$a = $board[$i][$y] -eq 'Q'
-			if ($a) { "$x $y" }
+			#if ($a) { "$x $y" }
 		}
 
-		'--------'
+		#'--------'
 		# diagonal
 
 
 	}
 }
+
+
+
+
+function PrintBoard () {
+	for ($x=0; $x -lt 4; $x++) {
+		for ($y=0; $y -lt 4; $y++) {
+			[Console]::Write( $board[$x][$y] )
+		}
+		[Console]::Write( "`n" )
+	}
+}
+
+
+
+#PrintBoard
 
 
 <#
