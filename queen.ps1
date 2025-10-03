@@ -49,22 +49,6 @@ function CheckAttack ($x, $y) {
 <#
 for ($x=0; $x -lt 4; $x++) {
 	for ($y=0; $y -lt 4; $y++) {
-		# x
-		for ($i=0; $i -lt 4; $i++) {
-			$a = $board[$x][$i] -eq 'Q'
-			#if ($a) { "$x $y" }
-		}
-
-		#'--------'
-		# y
-		for ($i=0; $i -lt 4; $i++) {
-			$a = $board[$i][$y] -eq 'Q'
-			#if ($a) { "$x $y" }
-		}
-
-		#'--------'
-		# diagonal
-
 
 	}
 }
@@ -82,8 +66,8 @@ function PrintBoard () {
 }
 
 
-CheckAttack 1 1
-PrintBoard
+#CheckAttack 1 1
+#PrintBoard
 
 
 <#
