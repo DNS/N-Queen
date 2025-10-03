@@ -14,6 +14,7 @@ function CheckAttack ($x, $y) {
 	for ($i=0; $i -lt 4; $i++) {
 		if ($i -ne $x -and $j -ne $y) {
 			$board[$i][$y] = 'Q'
+			#return $true
 		}
 		#return $board[$i][$y] -eq 'Q'
 	}
@@ -22,6 +23,7 @@ function CheckAttack ($x, $y) {
 	for ($i=0; $i -lt 4; $i++) {
 		if ($i -ne $x -and $j -ne $y) {
 			$board[$x][$i] = 'Q'
+			#return $true
 		}
 		#return $board[$x][$i] -eq 'Q'
 	}
@@ -34,6 +36,7 @@ function CheckAttack ($x, $y) {
 				$m2 = -($j-$y)/($i-$x)
 				if ($m1 -eq 1 -or $m2 -eq -1) {
 					$board[$i][$j] = 'Q'
+					#return $true
 				}
 
 			}
@@ -44,15 +47,17 @@ function CheckAttack ($x, $y) {
 }
 
 
+function TryQueen ($board) {
+	$board_copy = @() + $board
+	for ($x=0; $x -lt 4; $x++) {
+		for ($y=0; $y -lt 4; $y++) {
 
-
-<#
-for ($x=0; $x -lt 4; $x++) {
-	for ($y=0; $y -lt 4; $y++) {
-
+		}
 	}
 }
-#>
+
+
+
 
 
 
@@ -66,8 +71,8 @@ function PrintBoard () {
 }
 
 
-#CheckAttack 1 1
-#PrintBoard
+CheckAttack 1 1
+PrintBoard
 
 
 <#
